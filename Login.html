@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- ESTOS LINKS SON NECESARIO PARA EL FUNCIONAMIENTO DE LA PAGINA YA QUE AGREGAN DOCUMENTOS ADICIONALES -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel='stylesheet prefetch' href='css/bootstrap.min.css'>
+    <script src="js/jquery.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <!-- JQUERY SE OCUPA PARA EL FUNCIONAMIENTO DE LAS ALERTAS -->
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/login.css" rel="stylesheet">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <style>
+    .alert {
+        padding: 10px !important;
+    }
+    </style>
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <div class="content">
+
+        <div class="container">
+            <div class="login-content">
+                <form method="POST" action="" autocomplete="off">
+                    <img src="img\Escudo.jpg" style="height: 120px;margin-bottom: 12px;">
+                    <h2 class="title">Iniciar sesión</h2>
+                    <div class="form_container">
+                        <!-- este input es donde se pone el usuario el id class name placeholder label y el span son ocupados para poder tener el diseño actual el value se ocupa por si un dato esta mal no ponga todo de nuevo ya que solo eliminara el dato que esta mal -->
+                        <div class="form_group">
+                            <input type="text" id="name" class="form_input" name="c_usuario" placeholder=" ">
+                            <label for="name" class="form_label">Usuario:</label>
+                            <span class="form_line"></span>
+                        </div>
+
+
+                        <div class="form_group">
+                            <div class="input-group">
+                                <!-- este input es donde se pone el usuario el id class name placeholder label y el span son ocupados para poder tener el diseño actual el value se ocupa por si un dato esta mal no ponga todo de nuevo ya que solo eliminara el dato que esta mal -->
+                                <input class="form_input" type="password" name="c_password" placeholder=" "
+                                    id="password">
+
+                                <label for="name" class="form_label">Contraseña: </label>
+                                <button type="button" id="toggle-password-visibility">
+                                    <img src="img/invisible.png" alt="Mostrar/Ocultar contraseña" id="eye-icon">
+                                </button>
+
+                            </div>
+
+
+
+                            <script>
+                            // Selecciona el campo de entrada de contraseña en el documento HTML y lo almacena en una constante llamada "passwordField"
+                            const passwordField = document.querySelector("#password");
+                            // Selecciona el botón de alternar visibilidad de contraseña en el documento HTML y lo almacena en una constante llamada "toggleButton"
+                            const toggleButton = document.querySelector("#toggle-password-visibility");
+                            // Selecciona el icono del ojo en el documento HTML y lo almacena en una constante llamada "eyeIcon"
+                            const eyeIcon = document.querySelector("#eye-icon");
+
+                            // Agrega un event listener al botón de alternar visibilidad de contraseña para activarse en cada clic
+                            toggleButton.addEventListener("click", function() {
+                                // Si el tipo del campo de entrada de contraseña es "password", cambia el tipo a "text" y cambia la imagen del icono del ojo a una imagen de ojo abierto
+                                if (passwordField.type === "password") {
+                                    passwordField.type = "text";
+                                    eyeIcon.src = "img/ojo (1).png";
+                                    // De lo contrario, si el tipo del campo de entrada de contraseña no es "password", cambia el tipo a "password" y cambia la imagen del icono del ojo a una imagen de ojo cerrado
+                                } else {
+                                    passwordField.type = "password";
+                                    eyeIcon.src = "img/invisible.png";
+                                }
+                            });
+                            </script>
+
+
+                        </div>
+                        <div>
+
+                            <!-- Este modal se va a activar con el hipervínculo que manda a llamar a este código con ayuda de bustrap -->
+
+      
+                            <a href="Inicio.html" class="boton_entrar" style="text-decoration: none;">Entrar</a><br>
+                            <!-- este es el input para poder entrar y al igual que manda las validaciones -->
+
+
+                            <a href=" #" data-toggle="modal" data-target="#myModal" class="linc">¿Olvidaste tu
+                                contraseña?</a>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class=" modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Restaurar contraseña</h4>
+                    <style>
+                    .modal-title {
+                        float: left;
+                    }
+                    </style>
+                </div>
+                <div class="modal-body">
+                    <center>
+                        <p>Acudir con un administrador para la restauración de sus datos </p>
+                    </center>
+                </div>
+
+                <div class="modal-footer">
+                    <!-- este modal funciona para remover el modal -->
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

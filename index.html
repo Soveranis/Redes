@@ -86,10 +86,19 @@
                         <div>
 
                             <!-- Este modal se va a activar con el hipervínculo que manda a llamar a este código con ayuda de bustrap -->
-
-      
-                            <a href="Inicio.html" class="boton_entrar" style="text-decoration: none;">Entrar</a><br>
-                            <!-- este es el input para poder entrar y al igual que manda las validaciones -->
+                            <div class="alert alert-warning" id="alerta_exito" style="display: none;">
+                                <strong>¡Genial!</strong> La prueba inicial parece funcionar correctamente.
+                            </div>
+                            
+                            <a href="#" class="boton_entrar" style="text-decoration: none;" onclick="mostrarAlerta()">Entrar</a><br>
+                            
+                            <script>
+                                function mostrarAlerta() {
+                                    var alerta = document.getElementById('alerta_exito');
+                                    alerta.style.display = 'block';
+                                }
+                            </script>
+                            
 
 
                             <a href=" #" data-toggle="modal" data-target="#myModal" class="linc">¿Olvidaste tu

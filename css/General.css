@@ -221,7 +221,7 @@ nav.open .sidebar {
     display: grid;
     height: 100%;
     flex-direction: column;
-    background-color: #47464b;
+    background-color: #3A3940;
     padding-top: 40px;
     margin-left: -25px;
 	width: 280px;
@@ -317,10 +317,10 @@ table {
     bottom: 0;
     display: flex;
     position: fixed;
-    height: 60px;
-    padding: 6px;
+    height: 45px;
+  
     width: 255px;
-    background-color: #3A3940;
+    background-color: #47464b;
 }
 .img_44{
 	height:50px;
@@ -342,13 +342,12 @@ border-radius: 5px !important;
 }
 .sk{
 	background-color: #0075FF;
-	
+
 }
 .form_grup{
 	width: 63.3px;
     padding: 10px 1px 1px 19px;
-    border: solid 1px rgb(68, 68, 68); 
-	-webkit-box-shadow:5px 0px 8px 0px rgba(0, 0, 0, 0.38);
+	border: 1px solid #3A3940;
 	border-radius: 2px;
 }
 .axel {
@@ -359,10 +358,126 @@ border-radius: 5px !important;
 .footer_remplazo {
 	display: flex;
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 10px;
+	grid-gap: 50px;
   }
   .fondo_uni{
 	position: absolute;
     width: 260px;
     margin-left: 16px;
   }
+  .button {
+	width: auto;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 10px;
+	padding: 0px 15px;
+	background-color: rgb(66, 66, 66);
+	border-radius: 6px;
+	color: white;
+	border: none;
+	position: relative;
+	cursor: pointer;
+	transition-duration: .2s;
+  }
+  
+  
+  .bell {
+	width: 13px;
+  }
+  
+  .bell path {
+	fill: #d7b821;
+  }
+  .bell_Verde path{
+	fill: #36d721;
+  }
+  .bell_rojo path{
+	fill: #be2222e1;
+  }
+  .Numero_Reportes {
+	position: absolute;
+
+	padding:5px;
+	right: -6px;
+	top:-10px;
+	border-radius: 100%;
+	width: 30px;
+	height: 70%;
+	background-color:#d7b821;
+  }
+  
+  .arrow {
+	position: absolute;
+	right: 0;
+	width: 30px;
+	height: 100%;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .button:hover {
+	background-color: rgb(77, 77, 77);
+	transition-duration: .2s;
+  }
+  
+  .button:hover .arrow {
+	animation: slide-right .6s ease-out both;
+  }
+  /* arrow animation */
+  @keyframes slide-right {
+	0% {
+	  transform: translateX(-10px);
+	  opacity: 0;
+	}
+  
+	100% {
+	  transform: translateX(0);
+	  opacity: 1;
+	}
+  }
+  
+  .button:active {
+	transform: translate(1px , 1px);
+	transition-duration: .2s;
+  }
+  
+
+  .Reportes_abajo{
+	width: 100%;
+  
+    height: 35px;
+    padding: 7px;
+    margin-top: 15px;
+  
+	float:left;
+	grid-gap: 40px;
+  }
+  .form-report{
+	
+	margin-left: 30px;
+	float:right;
+  }
+  .form-report i{
+	margin: 0px 5px 0px 0px;
+  }
+#foor{
+	text-decoration: none;
+	width: 100px;
+	padding: 0px !important;
+}
+
+.alert-baja {
+    color: #76523c;
+    background-color: #ff960042;
+    border-color: #de8b1c2e;
+
+}
+.cont_usuarios{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 20px;
+}

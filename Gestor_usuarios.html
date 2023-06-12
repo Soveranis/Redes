@@ -20,65 +20,65 @@
     <script src="https://kit.fontawesome.com/cde87c5826.js" crossorigin="anonymous"></script>
 </head>
 <style>
-label {
-    margin-bottom: 20px;
-}
+    label {
+        margin-bottom: 20px;
+    }
 </style>
 <script>
-$(document).ready(function() {
-    $('#myTable').DataTable({ //creíamos una variable y una función para poder usar data tables
-        "orderFixed": [
-            [0, "asc"]
-        ], //este es el orden con el que se van a ir imprimiendo
-        "pageLength": 7, //esta es la pagination con la que se va a ir poniendo
-        "ordering": false, //quitamos el orden automático de data tables
-        "language": { //este scipt se usa para poder tenerlo en español solo es para eso
-            "lengthMenu": "",
-            "info": "Mostrando pagina _PAGE_ de _PAGES_",
-            "infoEmpty": "No hay registros disponibles",
-            "infoFiltered": "(filtrada de MAX registros)",
-            "loadingRecords": "Cargando...",
-            "processing": "Procesando...",
-            "search": "Buscar:",
-            "zeroRecords": "No se encontraron registros ",
-            "paginate": {
-                "next": "Siguiente",
-                "previous": "Anterior"
+    $(document).ready(function () {
+        $('#myTable').DataTable({ //creíamos una variable y una función para poder usar data tables
+            "orderFixed": [
+                [0, "asc"]
+            ], //este es el orden con el que se van a ir imprimiendo
+            "pageLength": 7, //esta es la pagination con la que se va a ir poniendo
+            "ordering": false, //quitamos el orden automático de data tables
+            "language": { //este scipt se usa para poder tenerlo en español solo es para eso
+                "lengthMenu": "",
+                "info": "Mostrando pagina _PAGE_ de _PAGES_",
+                "infoEmpty": "No hay registros disponibles",
+                "infoFiltered": "(filtrada de MAX registros)",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscar:",
+                "zeroRecords": "No se encontraron registros ",
+                "paginate": {
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                },
+
+
             },
 
-
-        },
+        });
 
     });
+    $(document).ready(function () {
+        $('#example').DataTable({ //creíamos una variable y una función para poder usar data tables
+            "orderFixed": [
+                [0, "asc"]
+            ], //este es el orden con el que se van a ir imprimiendo
+            "pageLength": 7, //esta es la pagination con la que se va a ir poniendo
+            "ordering": false, //quitamos el orden automático de data tables
+            "language": { //este scipt se usa para poder tenerlo en español solo es para eso
+                "lengthMenu": "",
+                "info": "Mostrando pagina _PAGE_ de _PAGES_",
+                "infoEmpty": "No hay registros disponibles",
+                "infoFiltered": "(filtrada de MAX registros)",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscar:",
+                "zeroRecords": "No se encontraron registros ",
+                "paginate": {
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                },
 
-});
-$(document).ready(function() {
-    $('#example').DataTable({ //creíamos una variable y una función para poder usar data tables
-        "orderFixed": [
-            [0, "asc"]
-        ], //este es el orden con el que se van a ir imprimiendo
-        "pageLength": 7, //esta es la pagination con la que se va a ir poniendo
-        "ordering": false, //quitamos el orden automático de data tables
-        "language": { //este scipt se usa para poder tenerlo en español solo es para eso
-            "lengthMenu": "",
-            "info": "Mostrando pagina _PAGE_ de _PAGES_",
-            "infoEmpty": "No hay registros disponibles",
-            "infoFiltered": "(filtrada de MAX registros)",
-            "loadingRecords": "Cargando...",
-            "processing": "Procesando...",
-            "search": "Buscar:",
-            "zeroRecords": "No se encontraron registros ",
-            "paginate": {
-                "next": "Siguiente",
-                "previous": "Anterior"
+
             },
 
-
-        },
+        });
 
     });
-
-});
 </script>
 
 <body>
@@ -154,7 +154,7 @@ $(document).ready(function() {
 
                                 <li class="list">
                                     <a href="Gestor_reportes.html" class="nav-link">
-                                       
+
                                         <i class="fa-solid fa-paper-plane  alt-2 icon"></i>
                                         <span class="link">Gestor Reportes</span>
                                     </a>
@@ -163,7 +163,7 @@ $(document).ready(function() {
 
                                 <li class="list">
                                     <a href="Gestor_usuarios.html" class="nav-link">
-                                    <i class="fa-solid fa-user alt-2 icon"></i>
+                                        <i class="fa-solid fa-user alt-2 icon"></i>
                                         <span class="link">Gestor Usuarios</span>
                                     </a>
                                 </li>
@@ -221,10 +221,22 @@ $(document).ready(function() {
                                             aria-multiselectable="true">
 
                                             <h2 class="title">Administrador Usuarios</h2>
-                                            <button class="btn btn-warning" data-toggle="modal"
-                                                data-target="#exampleModal">Nuevo Usuario</button>
-                                            <button class="btn btn-primary" data-toggle="modal"
-                                                data-target="#usuarios_inactivos">Usuarios Inactivos</button>
+                                    
+
+                                            <div style="display: flex; grid-gap: 40px;">
+
+                                                <button class="button" data-toggle="modal"
+                                                    data-target="#exampleModal">
+
+                                                    <svg  class="bell"xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+                                                    Nuevo usuario
+                                                </button>
+
+                                                <button class="button" data-toggle="modal" data-target="#usuarios_inactivos">
+                                                    <svg  class="bell_rojo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"/></svg>
+                                                    Usuarios Inactivos
+                                                </button>
+                                            </div>
                                             <div class="row table-responsive col-12">
                                                 <table class="table-striped table-bordered" id="myTable"
                                                     style="font-size:13px; ; border:none;">
@@ -241,7 +253,7 @@ $(document).ready(function() {
                                                             <th style="color: white;">Fecha Captura</th>
                                                             <th style="color: white;">Editar</th>
                                                             <th style="color: white;">Desabilitar</th>
-                                                            
+
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -262,12 +274,57 @@ $(document).ready(function() {
                                                                     data-target="#editar"><i
                                                                         class="fa-solid fa-pen"></i></button>
                                                             </td>
-                                                            
+
                                                             <td><button class="btn btn-danger" data-toggle="modal"
-                                                                    data-target="#archivar"><i class="fa-solid fa-user-slash"></i></button>
+                                                                    data-target="#archivar"><i
+                                                                        class="fa-solid fa-user-slash"></i></button>
                                                             </td>
                                                         </tr>
 
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>Ivan</td>
+                                                            <td>Valencia García</td>
+
+                                                            <td>root</td>
+                                                            <td>ivan204</td>
+                                                            <td>admin</td>
+                                                            <td>Activo🟢</td>
+                                                            <td>2523165015</td>
+                                                            <td>2023-05-06</td>
+
+                                                            <td><button class="btn btn-success" data-toggle="modal"
+                                                                    data-target="#editar"><i
+                                                                        class="fa-solid fa-pen"></i></button>
+                                                            </td>
+
+                                                            <td><button class="btn btn-danger" data-toggle="modal"
+                                                                    data-target="#archivar"><i
+                                                                        class="fa-solid fa-user-slash"></i></button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>Juan Mateo </td>
+                                                            <td>García Hernández</td>
+
+                                                            <td>root</td>
+                                                            <td>juanchoxd</td>
+                                                            <td>admin</td>
+                                                            <td>Activo🟢</td>
+                                                            <td>2523165051</td>
+                                                            <td>2023-05-06</td>
+
+                                                            <td><button class="btn btn-success" data-toggle="modal"
+                                                                    data-target="#editar"><i
+                                                                        class="fa-solid fa-pen"></i></button>
+                                                            </td>
+
+                                                            <td><button class="btn btn-danger" data-toggle="modal"
+                                                                    data-target="#archivar"><i
+                                                                        class="fa-solid fa-user-slash"></i></button>
+                                                            </td>
+                                                        </tr>
                                                     </tbody>
 
                                                 </table>
@@ -308,14 +365,7 @@ $(document).ready(function() {
                                                     <li>Grupo Chispas</li>
                                                 </ul>
                                             </div>
-                                            <div class="footer_inicio">
-                                                <h4>Redes Sociales</h4><br>
-                                                <ul>
-                                                    <li>Gmail</li>
-                                                    <li>Facebook</li>
-                                                    <li>Messenger</li>
-                                                </ul>
-                                            </div>
+
                                             <div class="footer_inicio derechos_autor">
                                                 <h4>Derechos Autor</h4>
                                                 <ul>
@@ -382,6 +432,18 @@ $(document).ready(function() {
                     <label for="" style="margin:0px;">Contraseña</label>
                     <input type="text" class="form-control">
                 </div><br>
+                <div class="form-grup">
+                    <label for="" style="margin:0px;"> Tipo Usaurio</label>
+                    <select name="" id="" class="form-control">
+                        <option value="">Root</option>
+                        <option value="">Alumno</option>
+                        <option value="">Laboratorista</option>
+                    </select>
+                </div><br>
+                <div class="form-grup">
+                    <label for="" style="margin:0px;">Matricula</label>
+                    <input type="text" class="form-control">
+                </div><br>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
@@ -439,25 +501,39 @@ $(document).ready(function() {
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Reportes Atendidos</h4>
+                <h4 class="modal-title" id="exampleModalLabel">Nuevo Usuario</h4>
             </div>
             <div class="modal-body">
+             <div class="cont_usuarios">
                 <div class="form-grup">
                     <label for="" style="margin:0px;">Nombre</label>
                     <input type="text" class="form-control">
-                </div><br>
+                </div>
                 <div class="form-grup">
                     <label for="" style="margin:0px;">Apellidos</label>
                     <input type="text" class="form-control">
-                </div><br>
+                </div>
                 <div class="form-grup">
                     <label for="" style="margin:0px;"> Usuario</label>
                     <input type="text" class="form-control">
-                </div><br>
+                </div>
                 <div class="form-grup">
                     <label for="" style="margin:0px;">Contraseña</label>
                     <input type="text" class="form-control">
-                </div><br>
+                </div>
+                <div class="form-grup">
+                    <label for="" style="margin:0px;"> Tipo Usaurio</label>
+                    <select name="" id="" class="form-control">
+                        <option value="">Root</option>
+                        <option value="">Alumno</option>
+                        <option value="">Laboratorista</option>
+                    </select>
+                </div>
+                <div class="form-grup">
+                    <label for="" style="margin:0px;">Matricula</label>
+                    <input type="text" class="form-control">
+                </div>
+             </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
@@ -491,7 +567,7 @@ $(document).ready(function() {
                     </thead>
                     <tbody>
 
-                     
+
                     </tbody>
 
                 </table>
@@ -515,7 +591,7 @@ $(document).ready(function() {
                 <h4 class="modal-title" id="exampleModalLabel">Aviso</h4>
             </div>
             <div class="modal-body">
-            <center><label for="">¿Desea archivar este usuario?</label></center>
+                <center><label for="">¿Desea archivar este usuario?</label></center>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
